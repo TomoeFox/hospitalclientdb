@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<BorlandProject>
-	<Transactions>
-    <Transaction>2018/05/03 17:49:48.700.cpp,C:\Users\timca\Documents\RAD Studio\Projects\Unit3.cpp=C:\Users\timca\hospitalclientdb\Unit3.cpp</Transaction>
-    <Transaction>2018/05/03 17:49:48.714.h,C:\Users\timca\Documents\RAD Studio\Projects\Unit3.h=C:\Users\timca\hospitalclientdb\Unit3.h</Transaction>
-    <Transaction>2018/05/03 17:49:48.714.dfm,C:\Users\timca\Documents\RAD Studio\Projects\Unit3.dfm=C:\Users\timca\hospitalclientdb\Unit3.dfm</Transaction>
-    <Transaction>2018/05/03 17:49:53.569.cbproj,C:\Users\timca\Documents\RAD Studio\Projects\Project2.cbproj=C:\Users\timca\hospitalclientdb\Project2.cbproj</Transaction>
-  </Transactions>
-</BorlandProject>
