@@ -1,0 +1,34 @@
+//---------------------------------------------------------------------------
+
+#ifndef Unit3H
+#define Unit3H
+//---------------------------------------------------------------------------
+#include <Classes.hpp>
+#include <Controls.hpp>
+#include <StdCtrls.hpp>
+#include <Forms.hpp>
+#include <ADODB.hpp>
+#include <DB.hpp>
+#include <DBGrids.hpp>
+#include <Grids.hpp>
+#include <DBXMySql.hpp>
+#include <SqlExpr.hpp>
+#include <WideStrings.hpp>
+//---------------------------------------------------------------------------
+class TForm3 : public TForm
+{
+__published:	// IDE-managed Components
+	TADOConnection *ADOConnection1;
+	TADOQuery *ADOQuery1;
+	TDBGrid *DBGrid1;
+	TButton *Button1;
+	TADOTable *ADOTable1;
+	TDataSource *DataSource1;
+private:	// User declarations
+public:		// User declarations
+	__fastcall TForm3(TComponent* Owner);
+};
+//---------------------------------------------------------------------------
+extern PACKAGE TForm3 *Form3;
+//---------------------------------------------------------------------------
+#endif

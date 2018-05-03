@@ -1,0 +1,64 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "Unit3.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TForm3 *Form3;
+
+
+//---------------------------------------------------------------------------
+__fastcall TForm3::TForm3(TComponent* Owner)
+	: TForm(Owner)
+{
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm3::Edit1DblClick(TObject *Sender)
+{
+Edit1->Text = "";
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm3::FormCreate(TObject *Sender)
+{
+Button1->Hide();
+Button2->Hide();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm3::Button4Click(TObject *Sender)
+{
+
+
+if (Button4->Caption == "Подключится") {
+ ADOConnection1->ConnectionString = "Provider=MSDASQL.1;Persist Security Info=False;User ID=root;Extended Properties=\"DSN=hosp;DESCRIPTION=hospital patient database;SERVER="+Edit1->Text+";UID=root;DATABASE=hosp;PORT=3306\";Initial Catalog=hosp" ;
+ADOConnection1->Open();
+Button4->Caption = "Отключится" ;
+}
+else if (Button4->Caption == "Отключится") {
+  Button1->Hide();
+Button2->Hide();
+  ADOConnection1->Close();
+  Button4->Caption = "Подключится";
+	 }
+}
+//---------------------------------------------------------------------------
+
+
+void __fastcall TForm3::ADOConnection1AfterConnect(TObject *Sender)
+{
+ShowMessage("Подключенно");
+Button1->Show();
+Button2->Show();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm3::ADOConnection1AfterDisconnect(TObject *Sender)
+{
+ShowMessage("Отсоединен");
+}
+//---------------------------------------------------------------------------
+
