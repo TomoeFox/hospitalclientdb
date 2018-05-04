@@ -11,7 +11,6 @@ object Form3: TForm3
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
-  OnClose = FormClose
   OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
@@ -74,8 +73,8 @@ object Form3: TForm3
   object Label9: TLabel
     Left = 439
     Top = 29
-    Width = 15
-    Height = 40
+    Width = 18
+    Height = 33
     Caption = #8226
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText

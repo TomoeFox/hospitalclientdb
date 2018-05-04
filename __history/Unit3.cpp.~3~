@@ -57,15 +57,10 @@ ADOQuery1->ExecSQL();
 }    */
 
 ADOQuery1->SQL->Text="select * from patients WHERE PatName = :par1 AND Address = :par3 AND Year = :par2;";
-AnsiString PatName =(Edit2->Text);
-AnsiString Address=(Edit4->Text);
-AnsiString Year = (Edit3->Text)
-const char * address = Address.c_str();
-int year = Year.ToInt();
-ADOQuery1->Parameters->ParamByName("par1")->Value=pat;
-ADOQuery1->Parameters->ParamByName("par2")->Value=year;
-ADOQuery1->Parameters->ParamByName("par3")->Value=address;
-
+ADOQuery1->Parameters->ParamByName("par1")->Value=Edit2->Text;
+ADOQuery1->Parameters->ParamByName("par2")->Value=Edit3->Text;
+ADOQuery1->Parameters->ParamByName("par3")->Value=Edit4->Text;
+ADOQuery1->ExecSQL();
 ADOQuery1->ExecSQL();
 ADOQuery1->Open();
 }
