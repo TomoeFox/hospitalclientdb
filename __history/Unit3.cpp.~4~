@@ -21,43 +21,51 @@ ADOQuery1->Close();
 //ADOQuery1->Parameters->ParamByName("par1")->Value=Edit2->Text;   //Пациента Ф.И.О.
 //ADOQuery1->Parameters->ParamByName("par2")->Value=Edit3->Text;   //год
 //ADOQuery1->Parameters->ParamByName("par3")->Value=Edit4->Text; //адресс */
-if (Edit1->Text.IsEmpty()==true || Edit1->Text == " " || Edit1->Text == " ") {
-ADOQuery1->SQL->Text="select * from hosp.patients WHERE Year =:par2 AND PatName =:par1 AND Address =:par3;";
+/*if (Edit1->Text.IsEmpty()==true || Edit1->Text == " " || Edit1->Text == " ") {
+
+ADOQuery1->SQL->Text="select * from patients WHERE PatName = :par1 AND Address = :par3 AND Year = :par2;";
 ADOQuery1->Parameters->ParamByName("par1")->Value=Edit2->Text;
 ADOQuery1->Parameters->ParamByName("par2")->Value=Edit3->Text;
 ADOQuery1->Parameters->ParamByName("par3")->Value=Edit4->Text;
- ADOQuery1->ExecSQL();
-ADOQuery1->Open();
+ADOQuery1->ExecSQL();
 }
 else if (Edit2->Text.IsEmpty()==true || Edit2->Text == " " || Edit2->Text == " ") {
 
- ADOQuery1->SQL->Text="select * from hosp.patients WHERE DocName = :par0 AND Address = :par3 AND Year = :par2;";
+ ADOQuery1->SQL->Text="select * from patients WHERE DocName = :par0 AND Address = :par3 AND Year = :par2;";
 ADOQuery1->Parameters->ParamByName("par0")->Value=Edit1->Text;
 ADOQuery1->Parameters->ParamByName("par2")->Value=Edit3->Text;
 ADOQuery1->Parameters->ParamByName("par3")->Value=Edit4->Text;
 
  ADOQuery1->ExecSQL();
- ADOQuery1->Open();
 }
 else if (Edit3->Text.IsEmpty()==true || Edit3->Text == " " || Edit3->Text == " ") {
 
- ADOQuery1->SQL->Text="select * from hosp.patients WHERE DocName = :par0 AND Address = :par3 AND PatName = :par1;";
+ ADOQuery1->SQL->Text="select * from patients WHERE DocName = :par0 AND Address = :par3 AND PatName = :par1;";
  ADOQuery1->Parameters->ParamByName("par0")->Value=Edit1->Text;
 ADOQuery1->Parameters->ParamByName("par1")->Value=Edit2->Text;
 ADOQuery1->Parameters->ParamByName("par3")->Value=Edit4->Text;
  ADOQuery1->ExecSQL();
- ADOQuery1->Open();
 }
 else {
 
-ADOQuery1->SQL->Text="select * from hosp.patients WHERE DocName = :par0 AND Address = :par3 AND PatName = :par1 AND Year = :par2;";
+ADOQuery1->SQL->Text="select * from patients WHERE DocName = :par0 AND Address = :par3 AND PatName = :par1 AND Year = :par2;";
 ADOQuery1->Parameters->ParamByName("par0")->Value=Edit1->Text;
 ADOQuery1->Parameters->ParamByName("par1")->Value=Edit2->Text;
 ADOQuery1->Parameters->ParamByName("par2")->Value=Edit3->Text;
 ADOQuery1->Parameters->ParamByName("par3")->Value=Edit4->Text;
 ADOQuery1->ExecSQL();
-ADOQuery1->Open();
-}
+}    */
+
+ADOQuery1->SQL->Text="select * from patients WHERE PatName = :par1 AND Address = :par3 AND Year = :par2;";
+AnsiString PatName =(Edit2->Text);
+AnsiString Address=(Edit4->Text);
+AnsiString Year = (Edit3->Text)
+const char * address = Address.c_str();
+int year = Year.ToInt();
+ADOQuery1->Parameters->ParamByName("par1")->Value=pat;
+ADOQuery1->Parameters->ParamByName("par2")->Value=year;
+ADOQuery1->Parameters->ParamByName("par3")->Value=address;
+
 ADOQuery1->ExecSQL();
 ADOQuery1->Open();
 }
@@ -138,15 +146,6 @@ ShowMessage("Отключенно");
 void __fastcall TForm3::FormClose(TObject *Sender, TCloseAction &Action)
 {
   ADOConnection1->Close();
-}
-//---------------------------------------------------------------------------
-
-void __fastcall TForm3::Button6Click(TObject *Sender)
-{
-ADOQuery1->Close();
-ADOQuery1->SQL->Text="SELECT * FROM hosp.patients;";
-ADOQuery1->ExecSQL();
-ADOQuery1->Open();
 }
 //---------------------------------------------------------------------------
 
