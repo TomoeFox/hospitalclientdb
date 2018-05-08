@@ -1,6 +1,7 @@
 object Form3: TForm3
   Left = 0
   Top = 0
+  AlphaBlend = True
   Caption = 'Form3'
   ClientHeight = 614
   ClientWidth = 828
@@ -13,6 +14,9 @@ object Form3: TForm3
   OldCreateOrder = False
   OnClose = FormClose
   OnCreate = FormCreate
+  DesignSize = (
+    828
+    614)
   PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
@@ -89,7 +93,18 @@ object Form3: TForm3
     Top = 192
     Width = 812
     Height = 414
+    Cursor = crHandPoint
+    TabStop = False
+    Anchors = [akLeft, akTop, akRight, akBottom]
+    Constraints.MaxHeight = 414
+    Constraints.MaxWidth = 812
+    Constraints.MinHeight = 414
+    Constraints.MinWidth = 812
     DataSource = DataSource1
+    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgTabs]
+    ParentShowHint = False
+    ReadOnly = True
+    ShowHint = False
     TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
@@ -131,12 +146,13 @@ object Form3: TForm3
     OnClick = Button1Click
   end
   object Button2: TButton
-    Left = 602
+    Left = 688
     Top = 39
-    Width = 161
+    Width = 75
     Height = 25
-    Caption = #1044#1086#1073#1072#1074#1083#1077#1085#1080#1077'/'#1056#1077#1076#1072#1082#1090#1080#1088#1086#1074#1072#1085#1080#1077
+    Caption = #1044#1086#1073#1072#1074#1083#1077#1085#1080#1077
     TabOrder = 5
+    OnClick = Button2Click
   end
   object Button3: TButton
     Left = 688
@@ -145,6 +161,7 @@ object Form3: TForm3
     Height = 25
     Caption = #1059#1076#1072#1083#1077#1085#1080#1077
     TabOrder = 6
+    OnClick = Button3Click
   end
   object Button4: TButton
     Left = 352
@@ -180,6 +197,14 @@ object Form3: TForm3
     Caption = #1055#1086#1082#1072#1079#1072#1090#1100' '#1074#1089#1077
     TabOrder = 10
     OnClick = Button6Click
+  end
+  object Button7: TButton
+    Left = 584
+    Top = 39
+    Width = 98
+    Height = 25
+    Caption = #1056#1077#1076#1072#1082#1090#1080#1088#1086#1074#1072#1085#1080#1077
+    TabOrder = 11
   end
   object ADOConnection1: TADOConnection
     ConnectionString = 
