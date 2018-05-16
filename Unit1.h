@@ -15,17 +15,35 @@
 class TForm1 : public TForm
 {
 __published:	// IDE-managed Components
-	TEdit *Edit1;
-	TEdit *Edit2;
-	TEdit *Edit3;
-	TButton *Button1;
+	TDBGrid *DBGrid1;
 	TADOConnection *ADOConnection1;
 	TADOQuery *ADOQuery1;
 	TDataSource *DataSource1;
-	TDBGrid *DBGrid1;
-	TEdit *Edit4;
-	TEdit *Edit6;
+	TGroupBox *GroupBox1;
+	TButton *Button2;
+	TLabel *Label1;
+	TLabel *Label2;
+	TGroupBox *GroupBox2;
+	TButton *Button1;
+	TButton *Button3;
+	TButton *Button4;
+	TButton *Button5;
+	TButton *Button6;
+	TLabel *Label3;
+	TLabel *Label4;
+	TLabel *Label5;
+	TLabel *Label6;
 	void __fastcall Button1Click(TObject *Sender);
+	void __fastcall FormCreate(TObject *Sender);
+	void __fastcall Button2Click(TObject *Sender);
+	void __fastcall ADOConnection1AfterConnect(TObject *Sender);
+	void __fastcall Button6Click(TObject *Sender);
+	void __fastcall ADOConnection1AfterDisconnect(TObject *Sender);
+	void __fastcall Button4Click(TObject *Sender);
+	void __fastcall Button3Click(TObject *Sender);
+	void __fastcall Button5Click(TObject *Sender);
+
+
 private:	// User declarations
 public:		// User declarations
 	__fastcall TForm1(TComponent* Owner);
@@ -33,12 +51,14 @@ public:		// User declarations
 //---------------------------------------------------------------------------
 class DBaction: public TForm1 {
 public:
-UnicodeString FIOString(UnicodeString LastName,UnicodeString FirstName, UnicodeString ParName);
+UnicodeString FIOString(UnicodeString,UnicodeString, UnicodeString);
+bool TextChecker(UnicodeString);
 virtual UnicodeString SQL()=0;
 };
 class Select : public DBaction{
 public:
 UnicodeString SQL(UnicodeString, UnicodeString,UnicodeString,UnicodeString);
+
 };
 class Insert: public DBaction {
 public:
@@ -47,10 +67,12 @@ UnicodeString SQL(UnicodeString, UnicodeString,UnicodeString,UnicodeString);
 class Update: public DBaction {
 public:
 UnicodeString SQL(UnicodeString, UnicodeString,UnicodeString,UnicodeString);
+UnicodeString ChangeInfo(UnicodeString, UnicodeString,UnicodeString,UnicodeString);
 };
 class Delete: public DBaction {
 public:
 UnicodeString SQL(UnicodeString, UnicodeString,UnicodeString,UnicodeString);
+
 };
 //---------------------------------------------------------------------------
 extern PACKAGE TForm1 *Form1;
