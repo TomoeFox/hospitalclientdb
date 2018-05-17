@@ -2,7 +2,7 @@ object Form1: TForm1
   Left = 0
   Top = 0
   Caption = #1057#1059#1041#1044' '#1087#1086#1083#1080#1082#1083#1080#1085#1080#1082#1072
-  ClientHeight = 680
+  ClientHeight = 660
   ClientWidth = 1126
   Color = clBtnFace
   Constraints.MaxHeight = 719
@@ -14,6 +14,7 @@ object Form1: TForm1
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
+  Menu = MainMenu1
   OldCreateOrder = False
   OnCreate = FormCreate
   PixelsPerInch = 96
@@ -61,8 +62,8 @@ object Form1: TForm1
     TitleFont.Style = []
   end
   object GroupBox1: TGroupBox
-    Left = 992
-    Top = 8
+    Left = 997
+    Top = 22
     Width = 121
     Height = 65
     Caption = #1055#1086#1076#1082#1083#1102#1095#1077#1085#1080#1077
@@ -101,7 +102,7 @@ object Form1: TForm1
   end
   object GroupBox2: TGroupBox
     Left = 0
-    Top = 0
+    Top = 8
     Width = 513
     Height = 90
     Caption = #1044#1077#1081#1089#1090#1074#1080#1103
@@ -145,7 +146,7 @@ object Form1: TForm1
   end
   object Button6: TButton
     Left = 430
-    Top = 13
+    Top = 21
     Width = 83
     Height = 66
     Caption = #1055#1086#1082#1072#1079#1072#1090#1100' '#1074#1089#1077
@@ -173,5 +174,49 @@ object Form1: TForm1
     DataSet = ADOQuery1
     Left = 120
     Top = 136
+  end
+  object MainMenu1: TMainMenu
+    Left = 608
+    Top = 32
+    object N1: TMenuItem
+      Caption = #1055#1088#1086#1075#1088#1072#1084#1084#1072
+      object N2: TMenuItem
+        Caption = #1055#1086#1076#1082#1083#1102#1095#1080#1090#1100
+      end
+      object N3: TMenuItem
+        Caption = #1042#1099#1081#1090#1080
+        OnClick = N3Click
+      end
+    end
+    object N4: TMenuItem
+      Caption = #1044#1077#1081#1089#1090#1074#1080#1103
+      object N5: TMenuItem
+        Caption = #1044#1086#1073#1072#1074#1080#1090#1100
+        OnClick = N5Click
+      end
+      object N6: TMenuItem
+        Caption = #1059#1076#1072#1083#1080#1090#1100
+        OnClick = N6Click
+      end
+      object N7: TMenuItem
+        Caption = #1048#1089#1082#1072#1090#1100
+        OnClick = N7Click
+      end
+      object N8: TMenuItem
+        Caption = #1048#1079#1084#1077#1085#1080#1090#1100
+        OnClick = N8Click
+      end
+      object N9: TMenuItem
+        Caption = #1055#1086#1082#1072#1079#1072#1090#1100' '#1074#1089#1077
+        OnClick = N9Click
+      end
+    end
+    object N10: TMenuItem
+      Caption = #1054' '#1087#1088#1086#1075#1088#1072#1084#1084#1077
+      object N11: TMenuItem
+        Caption = #1055#1086#1084#1086#1097#1100
+        OnClick = N11Click
+      end
+    end
   end
 end

@@ -11,6 +11,7 @@
 #include <Data.Win.ADODB.hpp>
 #include <Vcl.DBGrids.hpp>
 #include <Vcl.Grids.hpp>
+#include <Vcl.Menus.hpp>
 //---------------------------------------------------------------------------
 class TForm1 : public TForm
 {
@@ -33,6 +34,18 @@ __published:	// IDE-managed Components
 	TLabel *Label4;
 	TLabel *Label5;
 	TLabel *Label6;
+	TMainMenu *MainMenu1;
+	TMenuItem *N1;
+	TMenuItem *N2;
+	TMenuItem *N3;
+	TMenuItem *N4;
+	TMenuItem *N5;
+	TMenuItem *N6;
+	TMenuItem *N7;
+	TMenuItem *N8;
+	TMenuItem *N9;
+	TMenuItem *N10;
+	TMenuItem *N11;
 	void __fastcall Button1Click(TObject *Sender);
 	void __fastcall FormCreate(TObject *Sender);
 	void __fastcall Button2Click(TObject *Sender);
@@ -42,6 +55,13 @@ __published:	// IDE-managed Components
 	void __fastcall Button4Click(TObject *Sender);
 	void __fastcall Button3Click(TObject *Sender);
 	void __fastcall Button5Click(TObject *Sender);
+	void __fastcall N3Click(TObject *Sender);
+	void __fastcall N5Click(TObject *Sender);
+	void __fastcall N6Click(TObject *Sender);
+	void __fastcall N7Click(TObject *Sender);
+	void __fastcall N8Click(TObject *Sender);
+	void __fastcall N9Click(TObject *Sender);
+	void __fastcall N11Click(TObject *Sender);
 
 
 private:	// User declarations

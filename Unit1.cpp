@@ -226,6 +226,7 @@ void __fastcall TForm1::ADOConnection1AfterConnect(TObject *Sender)
 Label2->Font->Color=clGreen;
 ShowMessage("Подключенно");
 Button2->Caption="Отключиться";
+N2->Caption=Button2->Caption;
 }
 //---------------------------------------------------------------------------
 void __fastcall TForm1::Button6Click(TObject *Sender)
@@ -240,6 +241,7 @@ void __fastcall TForm1::ADOConnection1AfterDisconnect(TObject *Sender)
 ShowMessage("Отключенно");
 Label2->Font->Color=clRed;
 Button2->Caption="Подключиться";
+N2->Caption=Button2->Caption;
 }
 //---------------------------------------------------------------------------
 void __fastcall TForm1::Button4Click(TObject *Sender)
@@ -277,3 +279,49 @@ Form2->Button1->Caption="Удалить";
 Form2->GroupBox2->Hide();
 Form2->GroupBox1->Caption="Данные для удаления";
 }
+
+void __fastcall TForm1::N3Click(TObject *Sender)
+{
+Form1->Close();
+Form2->Close();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::N5Click(TObject *Sender)
+{
+Button3->Click();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::N6Click(TObject *Sender)
+{
+Button1->Click();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::N7Click(TObject *Sender)
+{
+ Button4->Click();
+
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::N8Click(TObject *Sender)
+{
+Button5->Click();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::N9Click(TObject *Sender)
+{
+Button6->Click();
+}
+//---------------------------------------------------------------------------
+
+
+void __fastcall TForm1::N11Click(TObject *Sender)
+{
+ShowMessage("Все вопросы отсылать на email battleloren@gmail.com\ngithub.com/TomoeFox");
+}
+//---------------------------------------------------------------------------
+
