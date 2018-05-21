@@ -119,7 +119,15 @@ ShowMessage("Графа отчество пациента пуста!");
 return true;
 }
 if (Form2->Edit4->Text.IsEmpty() || Form2->Edit4->Text == " ") {
-ShowMessage("Графа врача пациента пуста!");
+ShowMessage("Графа фамилия врача пуста!");
+return true;
+}
+if (Form2->Edit13->Text.IsEmpty() || Form2->Edit13->Text == " ") {
+ShowMessage("Графа имя врача пуста!");
+return true;
+}
+if (Form2->Edit14->Text.IsEmpty() || Form2->Edit14->Text == " ") {
+ShowMessage("Графа отчество врача пуста!");
 return true;
 }
 if (Form2->Edit5->Text.IsEmpty() || Form2->Edit5->Text == " ") {
@@ -163,7 +171,15 @@ ShowMessage("Графа отчество пациента пуста!\nКолонка старых данных");
 return true;
 }
 if (Form2->Edit4->Text.IsEmpty() || Form2->Edit4->Text == " ") {
-ShowMessage("Графа врача пациента пуста!\nКолонка старых данных");
+ShowMessage("Графа фамилия врача пуста!\nКолонка старых данных");
+return true;
+}
+if (Form2->Edit13->Text.IsEmpty() || Form2->Edit13->Text == " ") {
+ShowMessage("Графа имя врача пуста!\nКолонка старых данных");
+return true;
+}
+if (Form2->Edit14->Text.IsEmpty() || Form2->Edit14->Text == " ") {
+ShowMessage("Графа отчество врача пуста!\nКолонка старых данных");
 return true;
 }
 if (Form2->Edit5->Text.IsEmpty() || Form2->Edit5->Text == " ") {
@@ -187,7 +203,15 @@ ShowMessage("Графа отчество пациента пуста!\nКолонка измененных данных");
 return true;
 }
 if (Form2->Edit10->Text.IsEmpty() || Form2->Edit10->Text == " ") {
-ShowMessage("Графа врача пациента пуста!\nКолонка измененных данных");
+ShowMessage("Графа фамилия врача пуста!\nКолонка измененных данных");
+return true;
+}
+if (Form2->Edit15->Text.IsEmpty() || Form2->Edit15->Text == " ") {
+ShowMessage("Графа имя врача пуста!\nКолонка измененных данных");
+return true;
+}
+if (Form2->Edit16->Text.IsEmpty() || Form2->Edit16->Text == " ") {
+ShowMessage("Графа отчество врача пуста!\nКолонка измененных данных");
 return true;
 }
 if (Form2->Edit11->Text.IsEmpty() || Form2->Edit11->Text == " ") {

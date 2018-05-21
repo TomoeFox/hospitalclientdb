@@ -38,6 +38,14 @@ __published:	// IDE-managed Components
 	TEdit *Edit10;
 	TEdit *Edit11;
 	TEdit *Edit12;
+	TEdit *Edit13;
+	TLabel *Label13;
+	TEdit *Edit14;
+	TLabel *Label14;
+	TLabel *Label15;
+	TLabel *Label16;
+	TEdit *Edit15;
+	TEdit *Edit16;
 	void __fastcall Button1Click(TObject *Sender);
 	void __fastcall FormCreate(TObject *Sender);
 private:	// User declarations

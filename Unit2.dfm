@@ -56,11 +56,11 @@ object Form2: TForm2
       Caption = #1040#1076#1088#1077#1089
     end
     object Label3: TLabel
-      Left = 288
+      Left = 267
       Top = 16
-      Width = 49
+      Width = 100
       Height = 13
-      Caption = #1054#1090#1095#1077#1089#1090#1074#1086
+      Caption = #1054#1090#1095#1077#1089#1090#1074#1086' '#1087#1072#1094#1080#1077#1085#1090#1072
     end
     object Label2: TLabel
       Left = 160
@@ -75,6 +75,20 @@ object Form2: TForm2
       Width = 95
       Height = 13
       Caption = #1060#1072#1084#1080#1083#1080#1103' '#1087#1072#1094#1080#1077#1085#1090#1072
+    end
+    object Label13: TLabel
+      Left = 160
+      Top = 62
+      Width = 52
+      Height = 13
+      Caption = #1048#1084#1103' '#1074#1088#1072#1095#1072
+    end
+    object Label14: TLabel
+      Left = 278
+      Top = 62
+      Width = 82
+      Height = 13
+      Caption = #1054#1090#1095#1077#1089#1090#1074#1086' '#1074#1088#1072#1095#1072
     end
     object Edit5: TEdit
       Left = 389
@@ -123,6 +137,22 @@ object Form2: TForm2
       Height = 21
       TabOrder = 5
       TextHint = #1048#1074#1072#1085#1086#1074
+    end
+    object Edit13: TEdit
+      Left = 135
+      Top = 81
+      Width = 121
+      Height = 21
+      TabOrder = 6
+      TextHint = #1048#1074#1072#1085
+    end
+    object Edit14: TEdit
+      Left = 262
+      Top = 81
+      Width = 121
+      Height = 21
+      TabOrder = 7
+      TextHint = #1048#1074#1072#1085#1086#1074#1080#1095
     end
   end
   object GroupBox2: TGroupBox
@@ -174,6 +204,20 @@ object Form2: TForm2
       Height = 13
       Caption = #1060#1072#1084#1080#1083#1080#1103' '#1074#1088#1072#1095#1072
     end
+    object Label15: TLabel
+      Left = 165
+      Top = 62
+      Width = 52
+      Height = 13
+      Caption = #1048#1084#1103' '#1074#1088#1072#1095#1072
+    end
+    object Label16: TLabel
+      Left = 285
+      Top = 62
+      Width = 82
+      Height = 13
+      Caption = #1054#1090#1095#1077#1089#1090#1074#1086' '#1074#1088#1072#1095#1072
+    end
     object Edit7: TEdit
       Left = 13
       Top = 35
@@ -221,6 +265,22 @@ object Form2: TForm2
       Height = 21
       TabOrder = 5
       TextHint = '1970'
+    end
+    object Edit15: TEdit
+      Left = 140
+      Top = 81
+      Width = 121
+      Height = 21
+      TabOrder = 6
+      TextHint = #1048#1074#1072#1085
+    end
+    object Edit16: TEdit
+      Left = 267
+      Top = 81
+      Width = 121
+      Height = 21
+      TabOrder = 7
+      TextHint = #1048#1074#1072#1085#1086#1074#1080#1095
     end
   end
 end
