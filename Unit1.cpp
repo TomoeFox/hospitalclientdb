@@ -23,39 +23,43 @@ __fastcall TForm1::TForm1(TComponent* Owner)
 //---------------------------------------------------------------------------
 UnicodeString DBaction::FIOString(UnicodeString LastName,UnicodeString FirstName, UnicodeString ParName){
 UnicodeString CombineString;
-if (Form2->Edit2->Text.IsEmpty()==true || Form2->Edit2->Text==" " && Form2->Edit3->Text.IsEmpty()==true || Form2->Edit2->Text == " ") {
+if (FirstName.IsEmpty()==true || FirstName==" " && ParName.IsEmpty()==true || ParName == " ") {
 CombineString = LastName;
+ShowMessage(CombineString);
 return CombineString;
+
 }
 else {
 CombineString = LastName+" "+FirstName.SubString(0,1)+"."+ParName.SubString(0,1)+".";
+ShowMessage(CombineString);
 return CombineString;
+
 }
 }
 //---------------------------------------------------------------------------
 UnicodeString Select::SQL(UnicodeString DocName, UnicodeString PatName, UnicodeString Address, UnicodeString Year)
 {
-if (DocName.IsEmpty() || DocName == " " && Address.IsEmpty() || Address ==" " && Year.IsEmpty() || Year == " ") {
+if (DocName.IsEmpty() || DocName == " " || DocName == ".." && Address.IsEmpty() || Address ==" " && Year.IsEmpty() || Year == " ") {
 UnicodeString SQL = "SELECT * FROM hosp.patients WHERE PatName LIKE\"%"+PatName+"%\";";
 return SQL;
 }
-if (PatName.IsEmpty() || PatName == " " && Address.IsEmpty() || Address ==" " && Year.IsEmpty() || Year == " ") {
+if (PatName.IsEmpty() || PatName == " " || PatName == ".." && Address.IsEmpty() || Address ==" " && Year.IsEmpty() || Year == " ") {
 UnicodeString SQL = "SELECT * FROM hosp.patients WHERE DocName LIKE\"%"+DocName+"%\";";
 return SQL;
 }
-if (DocName.IsEmpty() || DocName == " " && PatName.IsEmpty() || PatName ==" " && Year.IsEmpty() || Year == " ") {
+if (DocName.IsEmpty() || DocName == " " || DocName == ".." && PatName.IsEmpty() || PatName ==" " || PatName == ".." && Year.IsEmpty() || Year == " ") {
 UnicodeString SQL = "SELECT * FROM hosp.patients WHERE Address LIKE\"%"+Address+"%\";";
 return SQL;
 }
-if (DocName.IsEmpty() || DocName == " " && Address.IsEmpty() || Address ==" " && PatName.IsEmpty() || PatName == " ") {
+if (DocName.IsEmpty() || DocName == " " || DocName == ".." && Address.IsEmpty() || Address ==" " && PatName.IsEmpty() || PatName == " " || PatName == "..") {
 UnicodeString SQL = "SELECT * FROM hosp.patients WHERE Year LIKE\"%"+Year+"%\";";
 return SQL;
 }
-if (DocName.IsEmpty() || DocName == " " &&  Year.IsEmpty() || Year == " ")  {
+if (DocName.IsEmpty() || DocName == " " || DocName == ".." &&  Year.IsEmpty() || Year == " ")  {
 UnicodeString SQL = "SELECT * FROM hosp.patients WHERE PatName LIKE \"%"+PatName+"%\"AND Address LIKE \"%"+Address+"%\";";
 return SQL;
 }
-if (DocName.IsEmpty() || DocName == " " &&  Address.IsEmpty() || Address == " ")  {
+if (DocName.IsEmpty() || DocName == " "  || DocName == ".." &&  Address.IsEmpty() || Address == " ")  {
 UnicodeString SQL = "SELECT * FROM hosp.patients WHERE PatName LIKE \"%"+PatName+"%\"AND Year LIKE \"%"+Year+"%\";";
 return SQL;
 }
@@ -71,7 +75,7 @@ if (Address.IsEmpty() || Address == " ")  {
  UnicodeString SQL = "SELECT * FROM hosp.patients WHERE PatName LIKE \"%"+PatName+"%\"AND DocName LIKE \"%"+DocName+"%\" AND Address LIKE \"%"+Year+"%\"";
  return SQL;
 }
-if (DocName.IsEmpty() || DocName == " ")  {
+if (DocName.IsEmpty() || DocName == " " || DocName == "..")  {
 UnicodeString SQL = "SELECT * FROM hosp.patients WHERE PatName LIKE \"%"+PatName+"%\"AND Year LIKE \"%"+Year+"%\" AND Address LIKE \"%"+Address+"%\"";
 return SQL;
 }
