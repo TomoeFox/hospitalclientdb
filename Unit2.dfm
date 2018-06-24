@@ -16,6 +16,7 @@ object Form2: TForm2
   Font.Style = []
   OldCreateOrder = False
   OnCreate = FormCreate
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object Button1: TButton
@@ -28,19 +29,12 @@ object Form2: TForm2
     OnClick = Button1Click
   end
   object GroupBox1: TGroupBox
-    Left = 0
+    Left = 8
     Top = 8
     Width = 655
     Height = 129
     Caption = #1057#1090#1072#1088#1099#1077' '#1076#1072#1085#1085#1099#1077
     TabOrder = 1
-    object Label6: TLabel
-      Left = 24
-      Top = 62
-      Width = 77
-      Height = 13
-      Caption = #1060#1072#1084#1080#1083#1080#1103' '#1074#1088#1072#1095#1072
-    end
     object Label5: TLabel
       Left = 536
       Top = 16
@@ -76,19 +70,18 @@ object Form2: TForm2
       Height = 13
       Caption = #1060#1072#1084#1080#1083#1080#1103' '#1087#1072#1094#1080#1077#1085#1090#1072
     end
-    object Label13: TLabel
-      Left = 160
+    object Label6: TLabel
+      Left = 16
       Top = 62
-      Width = 52
+      Width = 64
       Height = 13
-      Caption = #1048#1084#1103' '#1074#1088#1072#1095#1072
+      Caption = #1060'.'#1048'.'#1054' '#1074#1088#1072#1095#1072
     end
-    object Label14: TLabel
-      Left = 278
-      Top = 62
-      Width = 82
+    object Label13: TLabel
+      Left = 159
+      Top = 81
+      Width = 3
       Height = 13
-      Caption = #1054#1090#1095#1077#1089#1090#1074#1086' '#1074#1088#1072#1095#1072
     end
     object Edit5: TEdit
       Left = 389
@@ -106,20 +99,12 @@ object Form2: TForm2
       TabOrder = 1
       TextHint = '1970'
     end
-    object Edit4: TEdit
-      Left = 8
-      Top = 81
-      Width = 121
-      Height = 21
-      TabOrder = 2
-      TextHint = #1048#1074#1072#1085#1086#1074
-    end
     object Edit3: TEdit
       Left = 262
       Top = 35
       Width = 121
       Height = 21
-      TabOrder = 3
+      TabOrder = 2
       TextHint = #1048#1074#1072#1085#1086#1074#1080#1095
     end
     object Edit2: TEdit
@@ -127,7 +112,7 @@ object Form2: TForm2
       Top = 35
       Width = 121
       Height = 21
-      TabOrder = 4
+      TabOrder = 3
       TextHint = #1048#1074#1072#1085
     end
     object Edit1: TEdit
@@ -135,28 +120,36 @@ object Form2: TForm2
       Top = 35
       Width = 121
       Height = 21
-      TabOrder = 5
+      TabOrder = 4
       TextHint = #1048#1074#1072#1085#1086#1074
     end
-    object Edit13: TEdit
-      Left = 135
+    object DBCB1: TDBLookupComboBox
+      Left = 8
       Top = 81
-      Width = 121
+      Width = 145
       Height = 21
-      TabOrder = 6
-      TextHint = #1048#1074#1072#1085
+      Hint = #1060'.'#1048'.'#1054'. '#1074#1088#1072#1095#1072
+      DropDownRows = 15
+      KeyField = 'DocName'
+      ListField = 'DocName'
+      ListSource = Form1.DataSource2
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 5
+      OnCloseUp = DBCB1CloseUp
     end
-    object Edit14: TEdit
-      Left = 262
+    object Edit4: TEdit
+      Left = 8
       Top = 81
-      Width = 121
+      Width = 126
       Height = 21
-      TabOrder = 7
-      TextHint = #1048#1074#1072#1085#1086#1074#1080#1095
+      ReadOnly = True
+      TabOrder = 6
+      TextHint = #1060'.'#1048'.'#1054'. '#1074#1088#1072#1095#1072
     end
   end
   object GroupBox2: TGroupBox
-    Left = 0
+    Left = 3
     Top = 143
     Width = 652
     Height = 122
@@ -199,24 +192,10 @@ object Form2: TForm2
     end
     object Label12: TLabel
       Left = 13
-      Top = 62
-      Width = 77
+      Top = 69
+      Width = 64
       Height = 13
-      Caption = #1060#1072#1084#1080#1083#1080#1103' '#1074#1088#1072#1095#1072
-    end
-    object Label15: TLabel
-      Left = 165
-      Top = 62
-      Width = 52
-      Height = 13
-      Caption = #1048#1084#1103' '#1074#1088#1072#1095#1072
-    end
-    object Label16: TLabel
-      Left = 285
-      Top = 62
-      Width = 82
-      Height = 13
-      Caption = #1054#1090#1095#1077#1089#1090#1074#1086' '#1074#1088#1072#1095#1072
+      Caption = #1060'.'#1048'.'#1054' '#1074#1088#1072#1095#1072
     end
     object Edit7: TEdit
       Left = 13
@@ -242,20 +221,12 @@ object Form2: TForm2
       TabOrder = 2
       TextHint = #1048#1074#1072#1085#1086#1074#1080#1095
     end
-    object Edit10: TEdit
-      Left = 13
-      Top = 81
-      Width = 121
-      Height = 21
-      TabOrder = 3
-      TextHint = #1048#1074#1072#1085#1086#1074
-    end
     object Edit11: TEdit
       Left = 394
       Top = 35
       Width = 121
       Height = 21
-      TabOrder = 4
+      TabOrder = 3
       TextHint = #1052#1080#1088#1072' 13'
     end
     object Edit12: TEdit
@@ -263,24 +234,32 @@ object Form2: TForm2
       Top = 35
       Width = 114
       Height = 21
-      TabOrder = 5
+      TabOrder = 4
       TextHint = '1970'
     end
-    object Edit15: TEdit
-      Left = 140
-      Top = 81
-      Width = 121
+    object DBCB2: TDBLookupComboBox
+      Left = 14
+      Top = 88
+      Width = 145
       Height = 21
-      TabOrder = 6
-      TextHint = #1048#1074#1072#1085
+      Hint = #1060'.'#1048'.'#1054'. '#1074#1088#1072#1095#1072
+      DropDownRows = 15
+      KeyField = 'DocName'
+      ListField = 'DocName'
+      ListSource = Form1.DataSource2
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 5
+      OnClick = DBCB2Click
     end
-    object Edit16: TEdit
-      Left = 267
-      Top = 81
-      Width = 121
+    object Edit10: TEdit
+      Left = 14
+      Top = 88
+      Width = 126
       Height = 21
-      TabOrder = 7
-      TextHint = #1048#1074#1072#1085#1086#1074#1080#1095
+      ReadOnly = True
+      TabOrder = 6
+      TextHint = #1060'.'#1048'.'#1054'. '#1074#1088#1072#1095#1072
     end
   end
 end

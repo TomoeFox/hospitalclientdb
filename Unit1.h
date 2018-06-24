@@ -46,6 +46,22 @@ __published:	// IDE-managed Components
 	TMenuItem *N9;
 	TMenuItem *N10;
 	TMenuItem *N11;
+	TPopupMenu *PopupMenu1;
+	TMenuItem *N12;
+	TMenuItem *N13;
+	TMenuItem *N14;
+	TMenuItem *N15;
+	TMenuItem *N16;
+	TMenuItem *N17;
+	TMenuItem *N18;
+	TLabel *Label7;
+	TLabel *Label8;
+	TDataSource *DataSource2;
+	TADOQuery *ADOQuery2;
+	TGroupBox *GroupBox3;
+	TButton *Button7;
+	TButton *Button8;
+	TButton *Button9;
 	void __fastcall Button1Click(TObject *Sender);
 	void __fastcall FormCreate(TObject *Sender);
 	void __fastcall Button2Click(TObject *Sender);
@@ -62,6 +78,11 @@ __published:	// IDE-managed Components
 	void __fastcall N8Click(TObject *Sender);
 	void __fastcall N9Click(TObject *Sender);
 	void __fastcall N11Click(TObject *Sender);
+	void __fastcall DBGrid1TitleClick(TColumn *Column);
+	void __fastcall N12Click(TObject *Sender);
+	void __fastcall N14Click(TObject *Sender);
+	void __fastcall Button8Click(TObject *Sender);
+	void __fastcall Button7Click(TObject *Sender);
 
 
 private:	// User declarations
@@ -93,6 +114,13 @@ class Delete: public DBaction {
 public:
 UnicodeString SQL(UnicodeString, UnicodeString,UnicodeString,UnicodeString);
 
+};
+class Doc: public DBaction {
+public:
+UnicodeString Ins(UnicodeString);
+UnicodeString Del(UnicodeString);
+UnicodeString Upd(UnicodeString);
+UnicodeString SQL(UnicodeString);
 };
 //---------------------------------------------------------------------------
 extern PACKAGE TForm1 *Form1;
